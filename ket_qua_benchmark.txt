@@ -1,0 +1,99 @@
+============================================================
+Chunker : RecursiveChunker(chunk_size=500)
+Embedder: mock embeddings fallback
+Tổng chunks nạp: 50
+============================================================
+
+CÂU 1: Người mua trên Shopee có bao nhiêu ngày để gửi yêu cầu trả hàng?
+         [filter={'audience': 'buyer'}]
+  --- Có filter ---
+  [1] score=0.2445  doc=tiki-return-policy  audience=buyer  ✗
+      | Các ngành hàng còn lại | 30 ngày đầu | Đổi mới / Hoàn tiền | Hoàn tiền |  ### Điều Kiện Trả Do Nhu Cầu (Sản Phẩm Không Lỗi)  - Không có dấu hiệu đã ...
+  [2] score=0.2186  doc=shopee-return-buyer  audience=buyer  ~ doc đúng
+      **Hình thức nhận hoàn tiền:** Ví ShopeePay, SPayLater, Thẻ Napas, Tài Khoản Ngân Hàng, Thẻ tín dụng/ghi nợ, hoặc Số Dư Tài Khoản Shopee.  ## Trả Hàng ...
+  [3] score=0.1838  doc=sendo-return-policy  audience=buyer  ✗
+      1. Truy cập Sendo.vn, đăng nhập tài khoản. 2. Vào mục "Chăm sóc khách hàng" → "Trả hàng hoàn tiền". 3. Chọn mặt hàng cần đổi trả. 4. Điền thông tin và...
+  --- Không filter (A/B) ---
+  [1] score=0.2445  doc=tiki-return-policy  audience=buyer
+      | Các ngành hàng còn lại | 30 ngày đầu | Đổi mới / Hoàn tiền | Hoàn tiền |  ### Điều Kiện Trả Do Nhu Cầu (Sản Phẩm Không...
+  [2] score=0.2186  doc=shopee-return-buyer  audience=buyer
+      **Hình thức nhận hoàn tiền:** Ví ShopeePay, SPayLater, Thẻ Napas, Tài Khoản Ngân Hàng, Thẻ tín dụng/ghi nợ, hoặc Số Dư T...
+  [3] score=0.2054  doc=shopee-return-refund-policy  audience=both
+      - Sản phẩm nguyên vẹn, nguyên bao bì nhưng Người Mua không còn nhu cầu (Trả hàng COM — áp dụng cho thành viên hạng Vàng,...
+  → Điểm câu 1: 1/2
+
+CÂU 2: Người bán trên Shopee phải phản hồi yêu cầu trả hàng trong bao lâu?
+         [filter={'audience': 'seller'}]
+  --- Có filter ---
+  [1] score=0.2129  doc=tiktok-shop-return-seller  audience=seller  ✗
+      1. Người Mua gửi yêu cầu đổi trả qua ứng dụng TikTok. 2. Hệ thống thông báo cho Người Bán. 3. Người Bán xem xét và phản hồi trong 2 ngày làm việc. 4. ...
+  [2] score=0.1944  doc=tiktok-shop-return-seller  audience=seller  ✗
+      - Xử lý yêu cầu đổi trả của Người Mua trong thời hạn quy định. - Phản hồi yêu cầu trong vòng **2 ngày làm việc** kể từ khi nhận thông báo từ hệ thống....
+  [3] score=0.1508  doc=tiktok-shop-return-seller  audience=seller  ✗
+      - Sản phẩm bị lỗi do sản xuất hoặc hư hại trong quá trình vận chuyển. - Người Bán giao sai sản phẩm (sai màu, sai size, sai model). - Sản phẩm không k...
+  --- Không filter (A/B) ---
+  [1] score=0.2958  doc=shopee-return-refund-policy  audience=both
+      - Sản phẩm nguyên vẹn, nguyên bao bì nhưng Người Mua không còn nhu cầu (Trả hàng COM — áp dụng cho thành viên hạng Vàng,...
+  [2] score=0.2446  doc=tiki-return-policy  audience=buyer
+      | Điện gia dụng (Tiki Trading) | 365 ngày | 30 ngày đầu: Hoàn tiền; từ ngày 31: Không hỗ trợ | Không hỗ trợ | | Điện gia...
+  [3] score=0.2129  doc=tiktok-shop-return-seller  audience=seller
+      1. Người Mua gửi yêu cầu đổi trả qua ứng dụng TikTok. 2. Hệ thống thông báo cho Người Bán. 3. Người Bán xem xét và phản ...
+  → Điểm câu 2: 0/2
+
+CÂU 3: Sendo hoàn tiền cho người mua qua kênh nào và mất bao lâu?
+  --- Có filter ---
+  [1] score=0.2331  doc=shopee-return-refund-policy  audience=both  ✗
+      - Sản phẩm nguyên vẹn, nguyên bao bì nhưng Người Mua không còn nhu cầu (Trả hàng COM — áp dụng cho thành viên hạng Vàng, Kim Cương hoặc ShopeeVIP).  *...
+  [2] score=0.2161  doc=shopee-return-buyer  audience=buyer  ✗
+      - Đã thanh toán hợp lệ nhưng không nhận được sản phẩm, hoặc không nhận đủ, hoặc nhận hàng giả/hàng nhái. - Sản phẩm bị lỗi hoặc hư hại trong quá trình...
+  [3] score=0.2161  doc=shopee-return-refund-policy  audience=both  ✗
+      - Đã thanh toán hợp lệ nhưng không nhận được sản phẩm, hoặc không nhận đủ, hoặc nhận hàng giả/hàng nhái. - Sản phẩm bị lỗi hoặc hư hại trong quá trình...
+  --- Không filter (A/B) ---
+  [1] score=0.2331  doc=shopee-return-refund-policy  audience=both
+      - Sản phẩm nguyên vẹn, nguyên bao bì nhưng Người Mua không còn nhu cầu (Trả hàng COM — áp dụng cho thành viên hạng Vàng,...
+  [2] score=0.2161  doc=shopee-return-buyer  audience=buyer
+      - Đã thanh toán hợp lệ nhưng không nhận được sản phẩm, hoặc không nhận đủ, hoặc nhận hàng giả/hàng nhái. - Sản phẩm bị l...
+  [3] score=0.2161  doc=shopee-return-refund-policy  audience=both
+      - Đã thanh toán hợp lệ nhưng không nhận được sản phẩm, hoặc không nhận đủ, hoặc nhận hàng giả/hàng nhái. - Sản phẩm bị l...
+  → Điểm câu 3: 0/2
+
+CÂU 4: Tiki hỗ trợ đổi trả điện thoại bị lỗi trong bao nhiêu ngày?
+         [filter={'audience': 'buyer'}]
+  --- Có filter ---
+  [1] score=0.2714  doc=shopee-return-buyer  audience=buyer  ✗
+      Shopee chỉ hoàn tiền khi: - Người Bán xác nhận đã nhận Sản Phẩm Hoàn Trả, hoặc - Người Mua chấp nhận đề xuất hoàn tiền không cần trả hàng, hoặc - Shop...
+  [2] score=0.2255  doc=tiki-return-policy  audience=buyer  ✓ GOLD
+      | Điện gia dụng (Tiki Trading) | 365 ngày | 30 ngày đầu: Hoàn tiền; từ ngày 31: Không hỗ trợ | Không hỗ trợ | | Điện gia dụng (nhà bán khác) | 7 ngày ...
+  [3] score=0.1987  doc=tiki-return-policy  audience=buyer  ~ doc đúng
+      Chỉ áp dụng trả hàng–hoàn tiền (không đổi, không trả do không còn nhu cầu) trong các trường hợp: - Hàng hóa không đảm bảo chất lượng (gãy, vỡ, lỗi kỹ ...
+  --- Không filter (A/B) ---
+  [1] score=0.2714  doc=shopee-return-buyer  audience=buyer
+      Shopee chỉ hoàn tiền khi: - Người Bán xác nhận đã nhận Sản Phẩm Hoàn Trả, hoặc - Người Mua chấp nhận đề xuất hoàn tiền k...
+  [2] score=0.2407  doc=shopee-return-refund-policy  audience=both
+      **Người Bán không chịu chi phí** khi: - Yêu cầu trả một phần đơn hàng. - Lý do "Chưa nhận được hàng" được Shopee chấp th...
+  [3] score=0.2255  doc=tiki-return-policy  audience=buyer
+      | Điện gia dụng (Tiki Trading) | 365 ngày | 30 ngày đầu: Hoàn tiền; từ ngày 31: Không hỗ trợ | Không hỗ trợ | | Điện gia...
+  → Điểm câu 4: 2/2
+
+CÂU 5: Người bán có phải chịu phí vận chuyển hoàn trả khi lỗi do đơn vị vận chuyển không?
+         [filter={'audience': 'seller'}]
+  --- Có filter ---
+  [1] score=0.1033  doc=tiktok-shop-return-seller  audience=seller  ✗
+      1. Người Mua gửi yêu cầu đổi trả qua ứng dụng TikTok. 2. Hệ thống thông báo cho Người Bán. 3. Người Bán xem xét và phản hồi trong 2 ngày làm việc. 4. ...
+  [2] score=0.0940  doc=tiktok-shop-return-seller  audience=seller  ✗
+      Người Bán từ chối xử lý yêu cầu đổi trả hợp lệ hoặc phản hồi trễ hạn có thể bị: - Trừ điểm đánh giá cửa hàng. - Phạt tiền theo chính sách của TikTok S...
+  [3] score=0.0624  doc=shopee-return-seller  audience=seller  ✓ GOLD
+      Người Bán **chịu chi phí vận chuyển** chiều hoàn trả trong các trường hợp: - Shopee chấp thuận yêu cầu không do lỗi Người Mua hoặc đơn vị vận chuyển. ...
+  --- Không filter (A/B) ---
+  [1] score=0.2910  doc=tiki-return-policy  audience=buyer
+      ## 2. Lỗi Ngoại Quan / Giao Sai / Giao Thiếu / Hết Hạn  | Vấn Đề | Thời Gian Hỗ Trợ | |--------|-----------------| | Lỗi...
+  [2] score=0.2595  doc=tiki-return-policy  audience=buyer
+      - Điện thoại, máy tính bảng, laptop. - Thiết bị số đã kích hoạt bảo hành, tháo seal, qua sử dụng. - Máy ảnh, máy quay ph...
+  [3] score=0.2581  doc=shopee-return-refund-policy  audience=both
+      - Sản phẩm nguyên vẹn, nguyên bao bì nhưng Người Mua không còn nhu cầu (Trả hàng COM — áp dụng cho thành viên hạng Vàng,...
+  → Điểm câu 5: 2/2
+
+============================================================
+TỔNG ĐIỂM: 5/10
+(Thang: 2đ/câu — top-3 có chunk đúng nguồn + chứa gold keyword)
+============================================================
